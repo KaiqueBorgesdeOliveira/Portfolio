@@ -1,0 +1,369 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #0073e6;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Seções principais */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #0073e6;
+    font-size: 1.8rem;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Projetos */
+#projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#projetos div {
+    padding: 20px;
+    background: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#projetos div h3 {
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+#projetos div p {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #222;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --header-bg: #0073e6;
+    --header-text: #fff;
+    --card-bg: #fff;
+    --card-border: #ddd;
+    --footer-bg: #222;
+    --footer-text: #fff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #181818;
+    --text-color: #f4f4f9;
+    --header-bg: #333;
+    --header-text: #ffcc00;
+    --card-bg: #282828;
+    --card-border: #444;
+    --footer-bg: #101010;
+    --footer-text: #bbb;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+header nav ul li a {
+    color: var(--header-text);
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Seções principais */
+section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+/* Estilo do botão de alternância de tema */
+#toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--header-text);
+    background-color: transparent;
+    border: 2px solid var(--header-text);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#toggle-theme:hover {
+    background-color: var(--header-text);
+    color: var(--header-bg);
+}
+
+/* Estilo da seção Sobre Mim */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--card-border);
+}
+
+.sobre-container p {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Habilidades */
+.habilidades {
+    margin-top: 20px;
+}
+
+.habilidades h3 {
+    font-size: 1.5rem;
+    color: var(--header-bg);
+    margin-bottom: 10px;
+}
+
+.linguagens {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.linguagens li {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.linguagens li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.linguagens li img:hover {
+    transform: scale(1.1);
+}
+
+.habilidades h3 {
+    font-size: 1.5rem;
+    color: var(--text-color); /* Substituí o uso de var(--header-bg) */
+    margin-bottom: 10px;
+}
+
+/* Ajuste da cor dos títulos no tema claro e escuro */
+#sobre h2, .habilidades h3 {
+    color: var(--text-color); /* Usa a variável adaptativa */
+}
+
+/* Texto do parágrafo dentro da seção Sobre Mim */
+#sobre p {
+    color: var(--text-color);
+}
+
+/* Ajuste dos títulos das seções */
+#projetos h2, #contato h2 {
+    color: var(--text-color); /* Usa cor adaptável ao tema */
+}
+
+/* Ajuste dos textos nos campos */
+#projetos p, #contato p {
+    color: var(--text-color); /* Adapta a cor do texto */
+}
+
+/* Estilo dos contêineres dos campos (cards) */
+#projetos, #contato {
+    background-color: var(--card-bg); /* Fundo adaptável ao tema */
+    border: 1px solid var(--card-border); /* Borda adaptável */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leve sombra */
+}
+
+/* Título dos cards */
+#projetos h2, #contato h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilo geral dos cartões */
+#projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste para garantir colunas bem distribuídas */
+    gap: 20px; /* Espaçamento entre os cartões */
+    justify-items: center; /* Alinha os itens no centro da grid */
+    margin-top: 20px;
+    padding: 0 10px; /* Garante que os cartões não fiquem colados nas bordas */
+}
+
+/* Ajuste do container principal */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px;
+    margin: 0 auto; /* Centraliza horizontalmente o container */
+    max-width: 1200px; /* Define uma largura máxima */
+    text-align: center; /* Alinha o conteúdo centralizado */ 
+}
+
+/* Estilo dos cartões permanece */
+.projeto-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-card h3 {
+    color: var(--header-bg);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.projeto-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.btn-projeto {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--header-bg);
+    background-color: var(--card-bg);
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-projeto:hover {
+    background-color: var(--header-bg);
+    color: var(--card-bg);
+}

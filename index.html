@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao meu Portfólio</h1>
+        <button id="toggle-theme">Alterar Tema</button>
+        <nav>
+            <ul>
+                <li><a href="#sobre" aria-label="Ir para Sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projetos" aria-label="Ir para Projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#contato" aria-label="Ir para Contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-container">
+                <img src="/imagens/foto.jpeg" alt="Foto de Kaique Borges" class="foto-perfil">
+                <p>
+                    Olá! Meu nome é Kaique Borges. Sou um desenvolvedor apaixonado por criar soluções incríveis e inovadoras.
+                    Com experiência em Java, estou sempre buscando novos desafios para crescer e contribuir.
+                </p>
+            </div>
+            <div class="habilidades">
+                <h3>Linguagens que domino:</h3>
+                <ul class="linguagens">
+                    <li><img src="https://icongr.am/devicon/html5-plain-wordmark.svg?size=128&color=currentColor" alt="HTML" title="HTML"></li>
+                    <li><img src="https://icongr.am/devicon/css3-plain-wordmark.svg?size=128&color=currentColor" alt="CSS" title="CSS"></li>
+                    <li><img src="https://icongr.am/devicon/react-original-wordmark.svg?size=114&color=currentColor" alt="React" title="React"></li>
+                    <li><img src="https://icongr.am/devicon/nodejs-plain-wordmark.svg?size=114&color=currentColor" alt="NodeJS" title="NodeJS"></li>
+                    <li><img src="https://icongr.am/devicon/java-plain-wordmark.svg?size=116&color=currentColor" alt="Java" title="Java"></li>
+                    <!-- Adicione mais logos conforme necessário -->
+                </ul>
+            </div>
+        </section>
+        
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-container">
+                <div class="projeto-card">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto 1. Mostra um pouco sobre o que foi feito.</p>
+                    <a href="link-do-projeto1.html" class="btn-projeto">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto 2. Inclui detalhes sobre a solução e tecnologias utilizadas.</p>
+                    <a href="link-do-projeto2.html" class="btn-projeto">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto 3. Foca nas funcionalidades principais e resultados obtidos.</p>
+                    <a href="link-do-projeto3.html" class="btn-projeto">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Informações de contato.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kaique Borges de Oliveira. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const toggleThemeButton = document.getElementById("toggle-theme");
+    
+        toggleThemeButton.addEventListener("click", () => {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute("data-theme");
+            
+            if (currentTheme === "dark") {
+                html.setAttribute("data-theme", "light");
+            } else {
+                html.setAttribute("data-theme", "dark");
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
+</body>
+</html>
