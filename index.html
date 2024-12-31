@@ -24,20 +24,20 @@
             <h2>Sobre Mim</h2>
             <div class="sobre-container">
                 <img src="/imagens/foto.jpeg" alt="Foto de Kaique Borges" class="foto-perfil">
-                <p>
+                <h3>
                     Olá! Meu nome é Kaique Borges. Sou um desenvolvedor apaixonado por criar soluções incríveis e inovadoras.
                     Com experiência em Java, estou sempre buscando novos desafios para crescer e contribuir.
-                </p>
+                </h3>
             </div>
             <div class="habilidades">
                 <h3>Linguagens que domino:</h3>
                 <ul class="linguagens">
                     <li><img src="https://icongr.am/devicon/html5-plain-wordmark.svg?size=128&color=currentColor" alt="HTML" title="HTML"></li>
                     <li><img src="https://icongr.am/devicon/css3-plain-wordmark.svg?size=128&color=currentColor" alt="CSS" title="CSS"></li>
-                    <li><img src="https://icongr.am/devicon/react-original-wordmark.svg?size=114&color=currentColor" alt="React" title="React"></li>
+                    <li><img src="https://icongr.am/simple/react.svg?size=128&color=currentColor&colored=false" alt="React" title="React"></li>
                     <li><img src="https://icongr.am/devicon/nodejs-plain-wordmark.svg?size=114&color=currentColor" alt="NodeJS" title="NodeJS"></li>
                     <li><img src="https://icongr.am/devicon/java-plain-wordmark.svg?size=116&color=currentColor" alt="Java" title="Java"></li>
-                    <!-- Adicione mais logos conforme necessário -->
+                    <li><img src="https://icongr.am/devicon/python-plain-wordmark.svg?size=128&color=currentColor" alt="Python" title="Python"></li>
                 </ul>
             </div>
         </section>
@@ -46,26 +46,51 @@
             <h2>Meus Projetos</h2>
             <div class="projetos-container">
                 <div class="projeto-card">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição breve do projeto 1. Mostra um pouco sobre o que foi feito.</p>
-                    <a href="link-do-projeto1.html" class="btn-projeto">Ver Projeto</a>
+                    <h3>Lista de Filmes</h3>
+                    <p>Desenvolvimento Backend em Java: APIs RESTful com Spring, integração HTTP/JSON e arquitetura Cliente/Servidor.</p>
+                    <a href="https://github.com/KaiqueBorgesdeOliveira/dslist" class="btn-projeto">Ver Projeto</a>
                 </div>
                 <div class="projeto-card">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição breve do projeto 2. Inclui detalhes sobre a solução e tecnologias utilizadas.</p>
-                    <a href="link-do-projeto2.html" class="btn-projeto">Ver Projeto</a>
+                    <h3>To-Do-List</h3>
+                    <p>To-Do List em Java: Projeto 100% orientado a objetos, com foco em organização e eficiência.</p>
+                    <a href="https://github.com/KaiqueBorgesdeOliveira/To-do-List" class="btn-projeto">Ver Projeto</a>
                 </div>
                 <div class="projeto-card">
                     <h3>Projeto 3</h3>
-                    <p>Descrição breve do projeto 3. Foca nas funcionalidades principais e resultados obtidos.</p>
-                    <a href="link-do-projeto3.html" class="btn-projeto">Ver Projeto</a>
+                    <p>Jogo da Cobrinha: Clássico recriado em Python, com lógica dinâmica e interatividade.</p>
+                    <a href="https://github.com/KaiqueBorgesdeOliveira/JogoDaCobra" class="btn-projeto">Ver Projeto</a>
                 </div>
             </div>
         </section>
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Informações de contato.</p>
-        </section>
+          <section id="contato-rede">
+            <div id="contato">
+              <h2>Contato</h2>
+              <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+          
+            <div id="redes-sociais">
+              <h2>Redes Sociais</h2>
+              <ul>
+                <li><a href="https://github.com/KaiqueBorgesdeOliveira" target="_blank">
+                  <img src="https://icongr.am/devicon/github-original.svg?size=128&color=currentColor" alt="GitHub"> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kaique-borges-3b5478117/" target="_blank">
+                  <img src="https://icongr.am/devicon/linkedin-plain.svg?size=128&color=currentColor" alt="LinkedIn"> LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/kaiq_borges/?next=%2F&hl=pt-br" target="_blank">
+                  <img src="https://icongr.am/simple/instagram.svg?size=128&color=currentColor&colored=false" alt="Instagram"> Instagram</a></li>
+              </ul>
+            </div>
+          </section>                    
     </main>
     <footer>
         <p>&copy; 2024 Kaique Borges de Oliveira. Todos os direitos reservados.</p>
