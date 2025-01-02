@@ -10,16 +10,20 @@
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao meu Portfólio</h1>
-        <button id="toggle-theme">Alterar Tema</button>
-        <nav>
-            <ul>
-                <li><a href="#sobre" aria-label="Ir para Sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#projetos" aria-label="Ir para Projetos" class="nav-link">Projetos</a></li>
-                <li><a href="#contato" aria-label="Ir para Contato" class="nav-link">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Bem-vindo ao meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre" aria-label="Ir para Sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#projetos" aria-label="Ir para Projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" aria-label="Ir para Contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="toggle-theme" class="theme-toggle">Alterar Tema</button>
+
+        </div>
     </header>
+    
     
     <main>
         <section id="sobre">
@@ -66,38 +70,55 @@
                 </div>
             </div>
         </section>
-          <section id="contato-rede">
+        <section id="contato-rede">
+            <!-- Formulário de Contato -->
             <div id="contato">
-              <h2>Contato</h2>
-              <form action="#" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-                
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-                
-                <button type="submit">Enviar</button>
-              </form>
+                <h2>Contato</h2>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
-          
+            
+            <!-- Redes Sociais -->
             <div id="redes-sociais">
-              <h2>Redes Sociais</h2>
-              <ul>
-                <li><a href="https://github.com/KaiqueBorgesdeOliveira" target="_blank">
-                  <img src="https://icongr.am/devicon/github-original.svg?size=128&color=currentColor" alt="GitHub"> GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/kaique-borges-3b5478117/" target="_blank">
-                  <img src="https://icongr.am/devicon/linkedin-plain.svg?size=128&color=currentColor" alt="LinkedIn"> LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/kaiq_borges/?next=%2F&hl=pt-br" target="_blank">
-                  <img src="https://icongr.am/simple/instagram.svg?size=128&color=currentColor&colored=false" alt="Instagram"> Instagram</a></li>
-              </ul>
+                <h2>Redes Sociais</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/KaiqueBorgesdeOliveira" target="_blank">
+                            <img src="https://icongr.am/devicon/github-original.svg?size=128&color=currentColor" alt="GitHub"> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/kaique-borges-3b5478117/" target="_blank">
+                            <img src="https://icongr.am/devicon/linkedin-plain.svg?size=128&color=currentColor" alt="LinkedIn"> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/kaiq_borges/?next=%2F&hl=pt-br" target="_blank">
+                            <img src="https://icongr.am/simple/instagram.svg?size=128&color=currentColor&colored=false" alt="Instagram"> Instagram
+                        </a>
+                    </li>
+                </ul>
+                <!-- Informações Adicionais -->
+                <div id="info-adicional">
+                    <h3>Disponibilidade</h3>
+                    <p>Aberto a propostas de freelances e projetos colaborativos.</p>
+                    <p><strong>E-mail preferencial:</strong> borgeskaique438@gmail.com</p>
+                </div>
             </div>
-          </section>                    
+        </section>                    
     </main>
     <footer>
-        <p>&copy; 2024 Kaique Borges de Oliveira. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Kaique Borges de Oliveira. Todos os direitos reservados.</p>
     </footer>
     <script>
         const toggleThemeButton = document.getElementById("toggle-theme");
@@ -121,6 +142,38 @@
         });
     });
 });
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("fNOW9az5KteJ6VuGZ");
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            // Coleta os dados do formulário
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem").value;
+            
+            // Envia o e-mail usando o EmailJS
+            emailjs.send("service_k07bt8g", "template_sp0u3s8", {
+                nome: nome,
+                email: email,
+                mensagem: mensagem,
+            })
+            .then(() => {
+                alert("Mensagem enviada com sucesso!");
+            })
+            .catch((error) => {
+                alert("Erro ao enviar mensagem. Tente novamente.");
+                    console.error("Detalhes do erro: ", error);
+                        if (error.text) {
+                            console.error("Resposta do servidor:", error.text);
+                        }
+        });
+
+        });
+
     </script>
 </body>
 </html>
