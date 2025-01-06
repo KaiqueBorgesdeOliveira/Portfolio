@@ -49,29 +49,35 @@
                 </ul>
             </div>
         </section>
-        
+
         <section id="projetos">
-            <h2>Meus Projetos</h2>
-            <div class="projetos-container">
-                <div class="projeto-card">
-                    <h3>Lista de Filmes</h3>
-                    <p>Desenvolvimento Backend em Java: APIs RESTful com Spring, integração HTTP/JSON e arquitetura Cliente/Servidor.</p>
-                    <a href="https://github.com/KaiqueBorgesdeOliveira/dslist" class="btn-projeto">Ver Projeto</a>
-                </div>
-                <div class="projeto-card">
-                    <h3>To-Do-List</h3>
-                    <p>To-Do List em Java: Projeto 100% orientado a objetos, com foco em organização e eficiência.</p>
-                    <a href="https://github.com/KaiqueBorgesdeOliveira/To-do-List" class="btn-projeto">Ver Projeto</a>
-                </div>
-                <div class="projeto-card">
-                    <h3>Jogo da Cobrinha</h3>
-                    <p>Jogo da Cobrinha: Clássico recriado em Python, com lógica dinâmica e interatividade.</p>
-                    <a href="https://github.com/KaiqueBorgesdeOliveira/JogoDaCobra" class="btn-projeto">Ver Projeto</a>
+            <div class="projetos-wrapper">
+                <h2>Meus Projetos</h2>
+                <div class="projetos-container">
+                    <div class="projeto-card">
+                        <h3>Lista de Filmes</h3>
+                        <p>Desenvolvimento Backend em Java: APIs RESTful com Spring, integração HTTP/JSON e arquitetura Cliente/Servidor.</p>
+                        <a href="https://github.com/KaiqueBorgesdeOliveira/dslist" class="btn-projeto">Ver Projeto</a>
+                    </div>
+                    <div class="projeto-card">
+                        <h3>To-Do-List</h3>
+                        <p>To-Do List em Java: Projeto 100% orientado a objetos, com foco em organização e eficiência.</p>
+                        <a href="https://github.com/KaiqueBorgesdeOliveira/To-do-List" class="btn-projeto">Ver Projeto</a>
+                    </div>
+                    <div class="projeto-card">
+                        <h3>Jogo da Cobrinha</h3>
+                        <p>Jogo da Cobrinha: Clássico recriado em Python, com lógica dinâmica e interatividade.</p>
+                        <a href="https://github.com/KaiqueBorgesdeOliveira/JogoDaCobra" class="btn-projeto">Ver Projeto</a>
+                    </div>
+                    <div class="projeto-card">
+                        <h3>Jogo da Cobrinha</h3>
+                        <p>Jogo da Cobrinha: Clássico recriado em Python, com lógica dinâmica e interatividade.</p>
+                        <a href="https://github.com/KaiqueBorgesdeOliveira/JogoDaCobra" class="btn-projeto">Ver Projeto</a>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="contato-rede">
-            <!-- Formulário de Contato -->
             <div id="contato">
                 <h2>Contato</h2>
                 <form id="form-contato">
@@ -81,8 +87,6 @@
                     <button type="submit">Iniciar conversa no WhatsApp</button>
                 </form>
             </div>
-            
-            <!-- Redes Sociais -->
             <div id="redes-sociais">
                 <h2>Redes Sociais</h2>
                 <ul>
@@ -102,7 +106,6 @@
                         </a>
                     </li>
                 </ul>
-                <!-- Informações Adicionais -->
                 <div id="info-adicional">
                     <h3>Disponibilidade</h3>
                     <p>Aberto a propostas de freelances e projetos colaborativos.</p>
@@ -139,23 +142,18 @@
     </script>
     <script>
         document.getElementById("form-contato").addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita o envio padrão do formulário
+        event.preventDefault();
 
         const nome = document.getElementById("nome").value;
 
-        // Seu número de telefone no formato internacional
-        const numeroWhatsApp = "5511977825304"; // Substitua pelo seu número
+        const numeroWhatsApp = "5511977825304";
 
-        // Mensagem automatizada para o WhatsApp
         const textoMensagem = `Olá! Meu nome é ${nome}. Gostaria de conversar com você.`;
 
-        // Codifica a mensagem para ser usada no link
         const mensagemCodificada = encodeURIComponent(textoMensagem);
 
-        // Gera o link para o WhatsApp
         const linkWhatsApp = `https://wa.me/${5511977825304}?text=${mensagemCodificada}`;
 
-        // Redireciona para o WhatsApp
         window.open(linkWhatsApp, "_blank");
         });
 
