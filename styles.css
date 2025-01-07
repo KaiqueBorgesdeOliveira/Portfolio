@@ -7,8 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
+    background-color: var(--bg-color); /* Usa a variável de fundo do tema */
+    color: var(--text-color); /* Ajusta a cor do texto */
     padding: 0 20px;
     max-width: 1200px;
     margin: auto;
@@ -84,16 +84,10 @@ section p {
     color: #555;
 }
 
-#projetos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
 #projetos div {
     padding: 20px;
-    background: #f4f4f9;
-    border: 1px solid #ddd;
+    background-color: var(--card-bg); /* Usa a variável para fundo */
+    border: 1px solid var(--card-border); /* Usa a variável para borda */
     border-radius: 8px;
     text-align: center;
 }
@@ -137,33 +131,57 @@ footer {
 }
 
 :root {
-    --bg-color: #F9F9F9;
-    --text-color: #333;
-    --header-bg: #0056D2;
-    --header-text: #fff;
-    --card-bg: #fff;
-    --card-border: #ddd;
-    --footer-bg: #222;
-    --footer-text: #fff;
+    --bg-color: #F5F7FA; /* Cor de fundo geral: tom neutro claro */
+    --text-color: #1A202C; /* Cor do texto: tom cinza escuro */
+    --header-bg: #2563EB; /* Cor do cabeçalho: azul vivo */
+    --header-text: #FFFFFF; /* Texto no cabeçalho: branco */
+    --card-bg: #FFFFFF; /* Cor do fundo dos cartões: branco */
+    --card-border: #E2E8F0; /* Cor das bordas dos cartões: cinza claro */
+    --footer-bg: #1A202C; /* Cor do rodapé: cinza bem escuro */
+    --footer-text: #F5F7FA; /* Texto do rodapé: branco claro */
+    --button-bg: #2563EB; /* Cor de fundo dos botões: azul vivo */
+    --button-text: #FFFFFF; /* Cor do texto nos botões: branco */
+    --button-hover-bg: #1D4ED8; /* Cor de fundo ao passar o mouse no botão: azul mais escuro */
 }
 
 [data-theme="dark"] {
-    --bg-color: #444;
-    --text-color: #121212;
-    --header-bg: #0056D2;
-    --header-text: #121212;
-    --card-bg: #DADADA;
-    --card-border: #444;
-    --footer-bg: #DADADA;
-    --footer-text: #121212;
+    --bg-color: #1A202C; /* Cor de fundo geral: cinza escuro */
+    --text-color: #E2E8F0; /* Cor do texto: cinza claro */
+    --header-bg: #1D4ED8; /* Cor do cabeçalho: azul mais escuro */
+    --header-text: #FFFFFF; /* Texto no cabeçalho: branco */
+    --card-bg: #2D3748; /* Cor do fundo dos cartões: cinza médio */
+    --card-border: #4A5568; /* Cor das bordas dos cartões: cinza escuro */
+    --footer-bg: #2D3748; /* Cor do rodapé: cinza médio */
+    --footer-text: #E2E8F0; /* Texto do rodapé: cinza claro */
+    --button-bg: #2563EB; /* Cor de fundo dos botões: azul vivo */
+    --button-text: #FFFFFF; /* Cor do texto nos botões: branco */
+    --button-hover-bg: #1D4ED8; /* Cor de fundo ao passar o mouse no botão: azul mais escuro */
 }
+
+/* Ajuste específico para escurecer as divs no tema escuro */
+[data-theme="dark"] .projeto-card, 
+[data-theme="dark"] .contato-container, 
+[data-theme="dark"] .redes-sociais-container {
+    background-color: var(--card-bg); /* Fundo escuro */
+    border-color: var(--card-border); /* Bordas escuras */
+    color: var(--text-color); /* Texto claro */
+}
+
+/* Botões no tema escuro */
+[data-theme="dark"] .btn-projeto {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-color: var(--button-bg);
+}
+
+[data-theme="dark"] .btn-projeto:hover {
+    background-color: var(--button-hover-bg);
+}
+
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-}
-
-body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -380,14 +398,17 @@ section {
 #contato {
     flex: 1;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--card-bg); /* Variável de fundo */
+    border: 1px solid var(--card-border); /* Variável de borda */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color); /* Garante que o texto também mude */
 }
   
+#redes-sociais h2, 
 #contato h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: var(--title-color); /* Usa uma variável para a cor do título */
 }
   
   #contato form {
@@ -436,7 +457,7 @@ section {
     margin: 20px auto;
     padding: 20px;
     max-width: 1200px;
-    background-color: #f4f4f4;
+    background-color: var(--card-bg-color); /* Variável para adaptar ao tema */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -444,14 +465,11 @@ section {
 #redes-sociais {
     flex: 1;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--card-bg); /* Variável de fundo */
+    border: 1px solid var(--card-border); /* Variável de borda */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-  
-#redes-sociais h2 {
-    margin-bottom: 20px;
-    color: #333;
+    color: var(--text-color); /* Garante que o texto também mude */
 }
   
 #redes-sociais ul li {
