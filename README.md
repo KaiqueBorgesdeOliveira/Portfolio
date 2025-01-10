@@ -27,6 +27,11 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - 📂 **Seção de Projetos**: Apresentação de projetos práticos.
 - 📞 **Formulário de Contato**: Formulário funcional que redireciona para o WhatsApp.
 - 📄 **Download de Currículo**: Botão para baixar o meu currículo em PDF.
+  - **Seções Detalhadas**:
+  - Sobre Mim
+  - Projetos
+  - Contato
+  - Redes Sociais
 
 ---
 
