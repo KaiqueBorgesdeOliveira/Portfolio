@@ -18,6 +18,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - **CSS3**: Estilização e responsividade.
 - **JavaScript**: Interatividade, como o botão de alternância de tema.
 - **Git**: Para versionamento de código.
+- - **Netlify** (para hospedagem)
 
 ---
 
