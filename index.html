@@ -50,32 +50,43 @@
                 </ul>
             </div>
         </section>
-
         <section id="projetos">
-            <div class="projetos-wrapper">
+            <div class="carousel">
                 <h2>Meus Projetos</h2>
-                <div class="projetos-container">
-                    <div class="projeto-card">
+                <div class="carousel-container">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <video src="video1.mp4" controls></video>
                         <h3>Lista de Filmes</h3>
                         <p>Desenvolvimento Backend em Java: APIs RESTful com Spring, integração HTTP/JSON e arquitetura Cliente/Servidor.</p>
                         <a href="https://github.com/KaiqueBorgesdeOliveira/dslist" class="btn-projeto">Ver Projeto</a>
                     </div>
-                    <div class="projeto-card">
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <video src="video2.mp4" controls></video>
                         <h3>To-Do-List</h3>
                         <p>To-Do List em Java: Projeto 100% orientado a objetos, com foco em organização e eficiência.</p>
                         <a href="https://github.com/KaiqueBorgesdeOliveira/To-do-List" class="btn-projeto">Ver Projeto</a>
                     </div>
-                    <div class="projeto-card">
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <video src="video3.mp4" controls></video>
                         <h3>Jogo da Cobrinha</h3>
                         <p>Jogo da Cobrinha: Clássico recriado em Python, com lógica dinâmica e interatividade.</p>
                         <a href="https://github.com/KaiqueBorgesdeOliveira/JogoDaCobra" class="btn-projeto">Ver Projeto</a>
                     </div>
-                    <div class="projeto-card">
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <video src="video4.mp4" controls></video>
                         <h3>Jogo da Velha</h3>
                         <p>Jogo da Velha: Feito em C, ótimo para fixar conceitos da linguagem.</p>
                         <a href="https://github.com/KaiqueBorgesdeOliveira/JogoDaVelha" class="btn-projeto">Ver Projeto</a>
                     </div>
+                    <!-- Adicione mais slides aqui -->
                 </div>
+                <!-- Botões para navegar -->
+                <button class="carousel-btn prev">❮</button>
+                <button class="carousel-btn next">❯</button>
             </div>
         </section>
         <section id="contato-rede">
@@ -158,6 +169,43 @@
         window.open(linkWhatsApp, "_blank");
         });
 
+    </script>
+    <script>
+        const carouselContainer = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+
+        let currentSlide = 0;
+
+        // Função para atualizar o carrossel
+        function updateCarousel() {
+            const slideWidth = slides[0].clientWidth; // Largura de um slide
+            carouselContainer.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+        }
+
+        // Botão "Anterior"
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+            } else {
+                currentSlide = slides.length - 1; // Volta para o último slide
+            }
+            updateCarousel();
+        });
+
+        // Botão "Próximo"
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+            } else {
+                currentSlide = 0; // Volta para o primeiro slide
+            }
+            updateCarousel();
+        });
+
+        // Ajustar quando a janela for redimensionada
+        window.addEventListener('resize', updateCarousel);
     </script>
 </body>
 </html>
