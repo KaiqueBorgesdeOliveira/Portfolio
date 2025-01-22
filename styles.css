@@ -651,3 +651,98 @@ section {
         gap: 10px;
     }
 }
+
+/* Sessão Mais Informações */
+#mais-informacoes {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+.mais-informacoes-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#mais-informacoes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+#roadmap, #sugestoes {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#roadmap h3, #sugestoes h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.roadmap-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roadmap-container li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.btn_enviar {
+    display: inline-block; /* Garante que o botão seja visível */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF; /* Azul padrão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espaço entre o botão e os outros elementos */
+}
+
+.btn_enviar:hover {
+    background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
+}
+
+.btn_enviar:active {
+    transform: scale(0.98); /* Pequeno efeito de clique */
+}

@@ -16,13 +16,15 @@
                 <ul>
                     <li><a href="#sobre" aria-label="Ir para Sobre" class="nav-link">Sobre</a></li>
                     <li><a href="#projetos" aria-label="Ir para Projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#roadmap" aria-label="Ir para Roadmap" class="nav-link">Roadmap</a></li>
+                    <li><a href="#sugestoes" aria-label="Ir para Deixe sua Opinião" class="nav-link">Deixe sua Opinião</a></li>
                     <li><a href="#contato" aria-label="Ir para Contato" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
             <button id="toggle-theme" class="theme-toggle">Alterar Tema</button>
-
         </div>
     </header>
+    
     
     
     <main>
@@ -126,6 +128,40 @@
             </div>
         </section>                    
     </main>
+    <section id="mais-informacoes">
+        <div class="mais-informacoes-wrapper">
+            <h2>Mais Informações</h2>
+    
+            <!-- Sessão do Roadmap -->
+            <div id="roadmap">
+                <h3>Meu Roadmap Criativo</h3>
+                <p>Conheça minha jornada e linha de estudos para alcançar meus objetivos como desenvolvedor!</p>
+                <div class="roadmap-container">
+                    <ul>
+                        <li><strong>2023:</strong> Estudo de lógica e algoritmos, além de fundamentos de programação.</li>
+                        <li><strong>2024:</strong> Backend com Java e Python, aprendendo APIs e bancos de dados.</li>
+                        <li><strong>2025:</strong> Desenvolvimento Backend e projetos avançados.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Sessão Deixe sua Opinião -->
+            <div id="sugestoes">
+                <h3>Deixe sua Opinião</h3>
+                <p>Gostou do meu portfólio? Tem sugestões ou ideias? Compartilhe abaixo:</p>
+                <form action="https://formsubmit.co/borgeskaique438@gmail.com" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+    
+                    <label for="comentario">Comentário:</label>
+                    <textarea id="comentario" name="comentario" rows="5" required></textarea>
+    
+                    <button type="submit" class="btn_enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <p>&copy; 2025 Kaique Borges de Oliveira. Todos os direitos reservados.</p>
     </footer>
@@ -207,5 +243,16 @@
         // Ajustar quando a janela for redimensionada
         window.addEventListener('resize', updateCarousel);
     </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
