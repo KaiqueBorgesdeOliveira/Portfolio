@@ -688,6 +688,7 @@ section {
 .roadmap-container ul {
     list-style: none;
     padding: 0;
+    color: #999;
 }
 
 .roadmap-container li {
@@ -746,3 +747,54 @@ form button:hover {
 .btn_enviar:active {
     transform: scale(0.98); /* Pequeno efeito de clique */
 }
+
+/* 📌 Ajustando a seção "Mais Informações" para combinar com o tema */
+body.dark #mais-informacoes {
+    background-color: #2D3748 !important; /* Azul escuro do tema */
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+/* 🔧 Ajustando o Roadmap para fundo escuro */
+body.dark #mais-informacoes .roadmap-item {
+    background-color: #24292e !important; /* Fundo mais escuro para contraste */
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+/* 🎨 Ajuste do texto do Roadmap no tema escuro */
+body.dark #mais-informacoes .roadmap-item p {
+    color: #cccccc !important;
+}
+
+/* 📌 Ajuste para a seção "Deixe sua Opinião" */
+body.dark #sugestoes {
+    background-color: #1A202C !important; /* Cor combinando com o restante do tema */
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+/* 🎨 Ajustando os Inputs e Textareas */
+body.dark #sugestoes input,
+body.dark #sugestoes textarea {
+    background-color: #24292e !important;
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+body.dark #sugestoes input::placeholder,
+body.dark #sugestoes textarea::placeholder {
+    color: #bbb !important;
+}
+
+/* ✅ Garantindo que o botão de Enviar fique visível e bonito */
+body.dark #sugestoes button.btn_enviar {
+    background-color: #007bff !important; /* Azul vibrante */
+    color: #ffffff !important;
+    border: none !important;
+}
+
+body.dark #sugestoes button.btn_enviar:hover {
+    background-color: #0056b3 !important;
+}
+

@@ -150,15 +150,22 @@
                 <h3>Deixe sua Opinião</h3>
                 <p>Gostou do meu portfólio? Tem sugestões ou ideias? Compartilhe abaixo:</p>
                 <form action="https://formsubmit.co/borgeskaique438@gmail.com" method="POST">
+                    <!-- Configurações extras -->
+                    <input type="hidden" name="_subject" value="Nova Opinião do Portfólio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://seusite.com/agradecimento.html"> <!-- Página de redirecionamento -->
+                    
+                    <!-- Campos visíveis -->
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
-    
+                    
                     <label for="comentario">Comentário:</label>
                     <textarea id="comentario" name="comentario" rows="5" required></textarea>
-    
+                    
                     <button type="submit" class="btn_enviar">Enviar</button>
                 </form>
             </div>
+            
         </div>
     </section>
     
@@ -187,6 +194,11 @@
         });
     });
 });
+
+document.getElementById("toggle-theme").addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+});
+
     </script>
     <script>
         document.getElementById("form-contato").addEventListener("submit", function (event) {
