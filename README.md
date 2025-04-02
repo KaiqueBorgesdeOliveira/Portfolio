@@ -48,7 +48,7 @@ Siga as instruções abaixo para rodar o projeto localmente:
    ```cd
     git@github.com:KaiqueBorgesdeOliveira/portf.git
 
-3. Acesse o diretório do projeto:
+3. Acesse o meu portfólio:
  ## 🌐 Acesse o Portfólio
 Você pode acessar o portfólio diretamente através deste link: [Meu Portfólio](https://kaique-borges.netlify.app/)
 
